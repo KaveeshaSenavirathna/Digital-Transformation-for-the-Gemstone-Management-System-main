@@ -75,7 +75,7 @@ To bridge the technological gap in Sri Lanka's gemstone industry by providing an
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/lahiru-priyankara/digital-gemstone-management-system.git
+git clone https://github.com/KaveeshaSenavirathna/Digital-Transformation-for-the-Gemstone-Management-System-main.git
 
 # Navigate to project directory
 cd digital-gemstone-management-system
