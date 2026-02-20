@@ -1,0 +1,108 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Text/Headers)
+   Accent Blue: #3498DB (Table border/focus)
+   Secondary Gray: #6c757d (Back Button)
+   Danger Red: #E74C3C (Low Stock highlight)
+   Light Background: #f4f7f9
+   Card Background: white
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. CONTAINER & HEADER                                               */
+/* ------------------------------------------------------------------- */
+
+.view-material-container {
+    padding: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 700px;
+    margin: 40px auto; /* Center the view on the page */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.view-material-container h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2C3E50;
+    border-bottom: 2px solid #3498DB; /* Accent line under the header */
+    padding-bottom: 10px;
+}
+
+/* Loading/Not Found Messages */
+.view-material-container > p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #6c757d;
+    padding: 50px 0;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. DETAILS TABLE                                                    */
+/* ------------------------------------------------------------------- */
+
+.view-material-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.view-material-table th,
+.view-material-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0; /* Light separator */
+}
+
+.view-material-table th {
+    width: 30%; /* Gives the labels enough space */
+    font-weight: 600;
+    color: #4b5563;
+    background-color: #f7f7f7;
+    text-transform: capitalize;
+}
+
+.view-material-table td {
+    width: 70%;
+    color: #2C3E50;
+    font-weight: 400;
+}
+
+/* Low Stock Highlight */
+.view-material-table .low-stock th,
+.view-material-table .low-stock td {
+    background-color: #fcebeb; /* Very light red background */
+    font-weight: 700;
+    color: #E74C3C; /* Red text */
+}
+
+/* Remove bottom border from last row */
+.view-material-table tbody tr:last-child th,
+.view-material-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. BUTTON                                                           */
+/* ------------------------------------------------------------------- */
+
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    color: white;
+    background-color: #6c757d; /* Secondary Gray */
+    text-decoration: none; /* For the Link component */
+    margin-top: 15px;
+}
+
+.back-btn:hover {
+    background-color: #5a6268;
+}

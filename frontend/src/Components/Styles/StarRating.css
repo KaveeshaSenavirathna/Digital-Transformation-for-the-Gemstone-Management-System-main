@@ -1,0 +1,252 @@
+/* SimpleStarRating.css - Clean Star Rating Without Comments */
+
+.simple-star-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stars-container {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.star {
+  background: none;
+  border: none;
+  padding: 0.15rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.star:hover:not(:disabled) {
+  transform: scale(1.15);
+}
+
+.star:active:not(:disabled) {
+  transform: scale(1.05);
+}
+
+.star.filled {
+  color: #FFD700;
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+}
+
+.star.empty {
+  color: #E0E0E0;
+}
+
+.star:hover:not(:disabled) {
+  color: #FFED4E;
+  filter: drop-shadow(0 0 5px rgba(255, 237, 78, 0.8));
+}
+
+.star:disabled {
+  cursor: default;
+}
+
+.star:disabled:hover {
+  transform: none;
+}
+
+/* Size variations */
+.simple-star-rating.small .star svg {
+  width: 18px;
+  height: 18px;
+}
+
+.simple-star-rating.medium .star svg {
+  width: 24px;
+  height: 24px;
+}
+
+.simple-star-rating.large .star svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* Interactive vs readonly styles */
+.simple-star-rating.interactive .star {
+  cursor: pointer;
+}
+
+.simple-star-rating.interactive .star:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+
+.simple-star-rating.interactive .star:focus {
+  outline: 2px solid #FFD700;
+  outline-offset: 2px;
+}
+
+.simple-star-rating.readonly .star {
+  cursor: default;
+}
+
+.rating-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  margin-left: 0.25rem;
+}
+
+/* Click animation */
+.star:active:not(:disabled) {
+  animation: starClick 0.2s ease-in-out;
+}
+
+@keyframes starClick {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1.15); }
+}
+
+/* Rating submission section */
+.quick-rating-section {
+  background: linear-gradient(135deg, #f8f9fa, #fff);
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.rating-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.rating-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.rating-input-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.rating-display {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.submit-rating-btn {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #333;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submit-rating-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+  background: linear-gradient(135deg, #FFED4E, #FFB347);
+}
+
+.submit-rating-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-rating-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+/* Average rating display */
+.average-rating-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.rating-count {
+  font-weight: 500;
+  color: #888;
+}
+
+/* Loading state */
+.rating-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.rating-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #e0e0e0;
+  border-top-color: #FFD700;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success feedback */
+.rating-success {
+  color: #28a745;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rating-success::before {
+  content: "✓";
+  font-weight: bold;
+  color: #28a745;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .rating-input-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .submit-rating-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .simple-star-rating.large .star svg {
+    width: 28px;
+    height: 28px;
+  }
+}

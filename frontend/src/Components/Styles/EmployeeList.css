@@ -1,0 +1,208 @@
+/* Color Palette based on Sidebar: 
+   Primary Dark: #2C3E50
+   Accent Blue: #4A90E2 
+*/
+
+/* --- Global Layout Configuration (Matches Sidebar) --- */
+
+.page-container {
+    display: flex;
+}
+
+/* This class creates the space for the main content next to the sidebar */
+.content-area {
+    /* Assuming your sidebar is 150px wide */
+    margin-left: 150px; 
+    flex-grow: 1; 
+    padding: 20px 30px; 
+    background-color: #f4f7f9; 
+    min-height: 100vh;
+}
+
+.list-title {
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* --- Filter Bar Styling --- */
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.filter-input,
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.new-employee-btn {
+    margin-left: auto; /* Pushes the button to the far right */
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.new-employee-btn:hover {
+    background-color: #387bcf;
+}
+
+
+/* --- Table Styling --- */
+
+.table-responsive {
+    overflow-x: auto; /* Allows horizontal scrolling on small screens */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 14px;
+    min-width: 1000px; /* Ensure table doesn't get too narrow */
+}
+
+.employee-table th {
+    background-color: #2C3E50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.employee-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f9f9f9;
+}
+
+.employee-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- Specific Cell/Element Styling --- */
+
+.employee-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.emp-name-cell {
+    font-weight: 500;
+    color: #333;
+}
+
+.doc-link {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.doc-link:hover {
+    text-decoration: underline;
+}
+
+.no-data-row {
+    text-align: center;
+    padding: 20px !important;
+    font-style: italic;
+    color: #6c757d;
+    background-color: #fff;
+}
+
+
+/* --- Action Buttons Styling --- */
+
+.actions-cell {
+    white-space: nowrap; /* Keeps all buttons on one line */
+}
+
+.action-btn {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:last-child {
+    margin-right: 0;
+}
+
+.update-btn {
+    color: #28a745;
+    background-color: #fff;
+    border-color: #28a745;
+}
+
+.update-btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.delete-btn {
+    color: #dc3545;
+    background-color: #fff;
+    border-color: #dc3545;
+}
+
+.delete-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.print-btn {
+    color: #007bff;
+    background-color: #fff;
+    border-color: #007bff;
+}
+
+.print-btn:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* --- Loading State --- */
+
+.loading-text {
+    text-align: center;
+    font-size: 18px;
+    color: #6c757d;
+    padding-top: 50px;
+}

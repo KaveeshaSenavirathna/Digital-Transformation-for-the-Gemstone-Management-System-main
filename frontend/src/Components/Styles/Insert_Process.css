@@ -1,0 +1,145 @@
+/* ==============================
+   Insert Process Page Styling
+   ============================== */
+.insert-process-container {
+    margin-left: 250px !important; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f0f2f5; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* Page Title */
+.form-title {
+  font-size: 28px;
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* Step Selector */
+.step-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.step-selection label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.step-selection select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.step-selection select:hover {
+  border-color: #3b82f6;
+}
+
+/* Form */
+.process-form {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Grid Layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px 24px;
+}
+
+/* Each Input Field */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  background-color: #f9fafb;
+  font-size: 14px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  background-color: #fff;
+}
+
+/* Submit Button */
+.submit-button {
+  display: block;
+  margin: 35px auto 10px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.02);
+}
+
+/* Sidebar Integration Fix */
+.insert-process-container .Sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}
+
+/* Placeholder Text */
+input::placeholder {
+  color: #94a3b8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .insert-process-container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 22px;
+  }
+
+  .process-form {
+    padding: 25px;
+  }
+}

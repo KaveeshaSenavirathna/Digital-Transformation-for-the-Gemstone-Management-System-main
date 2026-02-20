@@ -1,0 +1,186 @@
+/* =================================================================== */
+/* 0. GLOBAL LAYOUT AND UTILITIES (Integration with Sidebar)             */
+/* =================================================================== */
+
+/* Assuming Sidebar has a fixed width of 150px (based on previous steps) */
+
+.supply-lot-page-wrapper {
+    /* Ensures the page content is next to the sidebar if the sidebar is not fixed/absolute */
+    display: flex; 
+    min-height: 100vh;
+}
+
+.page-content {
+    /* Assuming your sidebar is 150px wide from previous request */
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* ------------------------------------------------------------------- */
+/* 1. CONTAINER & HEADER                                               */
+/* ------------------------------------------------------------------- */
+
+.supply-lot-list-container {
+    padding: 24px; /* p-6 */
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Ensure background is white */
+}
+
+.header-group {
+    display: flex;
+    justify-content: space-between; /* Puts the button on the right */
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+.supply-lot-list-container h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #2C3E50;
+    margin: 0; 
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. SUMMARY BUTTON                                                   */
+/* ------------------------------------------------------------------- */
+
+.summary-btn {
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    background-color: #4A90E2; /* Professional Blue */
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 0.95rem;
+}
+
+.summary-btn:hover {
+    background-color: #357ABD;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. SEARCH & FILTER BAR                                              */
+/* ------------------------------------------------------------------- */
+
+.filter-bar {
+    display: flex; /* flex */
+    gap: 8px; /* gap-2 */
+    margin-bottom: 16px; /* mb-4 */
+    align-items: center;
+}
+
+.filter-bar input[type="text"] {
+    flex: 1; /* flex-1 */
+}
+
+.filter-bar input {
+    padding: 8px; /* p-2 */
+    border: 1px solid #d1d5db; /* border */
+    border-radius: 4px; /* rounded */
+}
+
+.filter-btn {
+    composes: action-btn; /* Inherits common button styles */
+    background-color: #10b981; /* bg-green-500 */
+    padding: 4px 12px; /* px-3 py-1 */
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background-color: #059669; /* hover:bg-green-600 */
+}
+
+/* ------------------------------------------------------------------- */
+/* 4. TABLE STYLING                                                    */
+/* ------------------------------------------------------------------- */
+
+.supply-lot-table {
+    width: 100%; /* w-full */
+    border-collapse: collapse;
+    font-size: 0.875rem; /* text-sm */
+    border: 1px solid #e5e7eb; /* border */
+}
+
+.supply-lot-table th,
+.supply-lot-table td {
+    border: 1px solid #e5e7eb; /* border */
+    padding: 8px; /* p-2 */
+    text-align: left;
+}
+
+.supply-lot-table th {
+    background-color: #f3f4f6; /* Light gray header background */
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.supply-lot-table tbody tr:nth-child(even) {
+    background-color: #f9fafb; /* Zeebra striping */
+}
+
+.supply-lot-table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+.supply-lot-table .no-records {
+    text-align: center; /* text-center */
+    padding: 8px; /* p-2 */
+    color: #6b7280;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. ACTION BUTTONS (View, Edit, Delete)                              */
+/* ------------------------------------------------------------------- */
+
+.actions-cell {
+    display: flex; /* flex */
+    gap: 4px; /* gap-1 */
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn {
+    padding: 4px 8px; /* px-2 py-1 */
+    border-radius: 4px; /* rounded */
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    font-size: 0.8rem; 
+    border: none;
+    cursor: pointer;
+}
+
+.view-btn {
+    composes: action-btn;
+    background-color: #3b82f6; /* bg-blue-500 */
+}
+
+.view-btn:hover {
+    background-color: #2563eb; 
+}
+
+.edit-btn {
+    composes: action-btn;
+    background-color: #f59e0b; /* bg-yellow-500 */
+}
+
+.edit-btn:hover {
+    background-color: #d97706; 
+}
+
+.delete-btn {
+    composes: action-btn;
+    background-color: #ef4444; /* bg-red-500 */
+}
+
+.delete-btn:hover {
+    background-color: #dc2626; 
+}

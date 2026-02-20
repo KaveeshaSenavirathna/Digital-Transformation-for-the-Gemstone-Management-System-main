@@ -1,0 +1,87 @@
+/* Color Palette:
+   - Primary BG: #2C3E50 (Darker, more sophisticated blue-grey)
+   - Secondary/Header BG: #243444 (Even darker for contrast)
+   - Accent/Hover: #4A90E2 (Professional, clean blue)
+   - Text: #ECF0F1 (Off-white for readability)
+*/
+
+/* Sidebar Base */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* Use a consistent, slightly smaller width for a modern look */
+  width: 250px; /* Changed from 20% to fixed pixel width */
+  background: #2C3E50;
+  color: #ECF0F1;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  z-index: 1100;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern Font Stack */
+}
+
+/* Header */
+.sidebar__header {
+  background: #243444;
+  padding: 20px 25px; /* Slightly adjusted padding */
+  border-bottom: 1px solid #34495E; /* Subtle separator */
+}
+
+.sidebar__title {
+  font-size: 1.4rem; /* Reduced for a cleaner look */
+  font-weight: 600; /* Bolder for emphasis */
+  margin: 0;
+  text-transform: uppercase; /* Makes titles look sharp */
+  letter-spacing: 1px;
+}
+
+/* Inner Navigation */
+.sidebar__inner {
+  padding: 10px 0; /* Padding is now only vertical */
+}
+
+.sidebar__inner ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Removed individual li margin for a cleaner block look */
+.sidebar__inner li {
+  margin: 0; 
+}
+
+.sidebar__inner a {
+  display: block; /* Makes the entire block clickable */
+  color: #ECF0F1;
+  text-decoration: none;
+  font-size: 1.05rem; /* Smaller, cleaner font size */
+  font-weight: 400;
+  padding: 12px 25px; /* Vertical and horizontal padding */
+  transition: background-color 0.2s, color 0.2s;
+  border-left: 3px solid transparent; /* Prepare for hover/active state line */
+}
+
+/* Professional Hover State */
+.sidebar__inner a:hover {
+  background-color: #34495E; /* Darker background on hover */
+  color: #4A90E2; /* Accent color text on hover */
+  border-left-color: #4A90E2; /* Accent color bar on the left */
+}
+
+/* Active State (Simulated - in a real app, you'd add a class like '.active') */
+/* .sidebar__inner a.active {
+    background-color: #34495E;
+    color: #4A90E2;
+    border-left-color: #4A90E2;
+    font-weight: 600;
+} */
+
+
+/* Page content should shift right */
+.page-content {
+  /* Match the fixed pixel width of the sidebar */
+  margin-left: 250px; 
+  padding: 20px 30px;
+}

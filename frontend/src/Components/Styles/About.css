@@ -1,0 +1,323 @@
+.about-container { 
+  padding-top: 0; /* consistent with home page */
+}
+
+/* Hero Section */
+.about-container .hero-section {
+  padding: 80px 0 60px;
+  background-image: 
+    linear-gradient(rgba(26, 26, 46, 0.7), rgba(45, 55, 72, 0.7)),
+    url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=1920&h=1080&fit=crop&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about-container .hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.about-container .hero-text {
+  text-align: center;
+}
+
+.about-container .hero-text .hero-title {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}
+
+.about-container .hero-description {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+
+/* Values Section */
+.values-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.value-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(26, 77, 46, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon-wrapper {
+  margin-bottom: 25px;
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  color: var(--primary-color);
+  margin: 0 auto;
+}
+
+.value-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+}
+
+.value-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.feature-card {
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(241, 245, 249, 0.8) 100%);
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(26, 77, 46, 0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon-wrapper {
+  flex-shrink: 0;
+}
+
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.feature-content {
+  flex: 1;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Team Section */
+.team-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.team-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(26, 77, 46, 0.1);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.team-avatar {
+  margin-bottom: 25px;
+}
+
+.avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.avatar-initial {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.team-role {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.team-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Center the last team member card */
+.team-card-last {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 400px;
+}
+
+/* Section spacing */
+.about-container .search-section,
+.about-container .collections-section,
+.about-container .featured-section {
+  padding: 24px 0;
+}
+
+.about-container .section-header h2 {
+  margin-bottom: 6px;
+}
+
+/* Cards re-use marketplace styles but slightly tighter */
+.about-container .category-grid,
+.about-container .collections-grid {
+  gap: 16px;
+}
+
+.about-container .category-card,
+.about-container .collection-card {
+  border-radius: 12px;
+}
+
+.about-container .collection-overlay h3 {
+  margin-bottom: 6px;
+}
+
+/* CTA */
+.about-cta {
+  padding: 28px 0 40px;
+  background: linear-gradient(0deg, #fff, #f8fafc);
+}
+.about-cta-box {
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+}
+.about-cta-box h2 { margin: 0 0 8px 0; }
+.about-cta-box p { margin: 0 0 16px 0; color: #64748b; }
+.about-cta-actions { display: flex; justify-content: center; gap: 12px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-container { padding-top: 160px; }
+  .about-container .hero-section { 
+    padding: 60px 0 40px;
+    background-attachment: scroll;
+  }
+  
+  .about-container .hero-text .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .values-grid,
+  .features-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .value-card,
+  .team-card {
+    padding: 30px 20px;
+  }
+  
+  .feature-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container .hero-text .hero-title {
+    font-size: 2rem;
+  }
+  
+  .about-container .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .value-title {
+    font-size: 1.3rem;
+  }
+  
+  .team-name {
+    font-size: 1.2rem;
+  }
+}
+
+

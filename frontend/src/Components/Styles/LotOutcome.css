@@ -1,0 +1,141 @@
+/* Wrapper to allow Sidebar + content */
+.lot-outcome-wrapper {
+  display: flex;
+}
+
+/* Main container */
+.lot-outcome-container {
+ /* Assuming your sidebar is 150px wide from previous request */
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* Header */
+.lot-outcome-container h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.filters input,
+.filters select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 4px #93c5fd;
+}
+
+/* Summary */
+.summary {
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 14px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+  font-size: 15px;
+  display: flex;
+
+}
+
+/* Table */
+.table-container {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.lot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.lot-table thead {
+  background: #eff6ff;
+}
+
+.lot-table th {
+  text-align: left;
+  padding: 12px;
+  color: #1e3a8a;
+  font-weight: 600;
+  border-bottom: 2px solid #dbeafe;
+}
+
+.lot-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lot-table tr:hover {
+  background-color: #f0f9ff;
+}
+
+/* Buttons */
+.view-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background-color: #2563eb;
+}
+
+/* Empty Message */
+.no-data {
+  text-align: center;
+  color: #6b7280;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+  }
+  .summary {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .lot-table th,
+  .lot-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+}

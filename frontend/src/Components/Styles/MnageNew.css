@@ -1,0 +1,145 @@
+.display-supply-container {
+  padding: 40px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  color: #333;
+  position: relative;
+}
+
+/* Back Button */
+.top-right-actions {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  
+}
+
+.back-button {
+  padding: 10px 16px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.back-button:hover {
+  background-color: #1976d2;
+  transform: translateY(-2px);
+}
+
+/* Title */
+.page-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.page-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Count summary under title */
+.count-summary {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 25px;
+  color: #444;
+  background-color: #ccc;
+}
+
+/* Search & Filters */
+.search-input {
+  padding: 6px 8px;
+  width: 250px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filters-container {
+  margin-bottom: 15px;
+}
+
+.filters-container select {
+  margin-right: 10px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Tables */
+.supply-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.supply-table th,
+.supply-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.supply-table th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+.supply-table tr:hover {
+  background-color: #fafafa;
+}
+
+/* Action buttons */
+.supply-table button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.supply-table button:hover {
+  opacity: 0.9;
+}
+
+.view-btn {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.update-btn {
+  background-color: #2196f3;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.proceed-btn {
+  background-color: #ff9800;
+  color: #fff;
+}
+
+.proceed-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

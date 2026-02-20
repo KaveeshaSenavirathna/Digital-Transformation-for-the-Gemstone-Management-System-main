@@ -1,0 +1,135 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Text/Headers)
+   Accent Green: #10B981 (Update Button BG)
+   Secondary Gray: #6c757d (Cancel Button BG)
+   Danger Red: #E74C3C (Error text)
+   Light Background: #f4f7f9
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. CONTAINER & HEADER                                               */
+/* ------------------------------------------------------------------- */
+
+.edit-container {
+   /* Assuming your sidebar is 150px wide from previous request */
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.edit-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #2C3E50;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. FORM LAYOUT & STYLES                                             */
+/* ------------------------------------------------------------------- */
+
+.edit-form {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+}
+
+.section-title {
+    grid-column: 1 / -1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4A90E2;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #e5e7eb;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="date"],
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.error-text {
+    color: #E74C3C;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. BUTTONS                                                          */
+/* ------------------------------------------------------------------- */
+
+.button-group {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.update-btn, .cancel-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.update-btn {
+    background-color: #10B981; /* Accent Green */
+    color: white;
+}
+
+.update-btn:hover {
+    background-color: #059669;
+}
+
+.cancel-btn {
+    background-color: #6c757d; /* Secondary Gray */
+    color: white;
+}
+
+.cancel-btn:hover {
+    background-color: #5a6268;
+}

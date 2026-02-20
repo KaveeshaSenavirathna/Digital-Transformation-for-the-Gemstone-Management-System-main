@@ -1,0 +1,261 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Text/Header/Sidebar)
+   Accent Blue: #4A90E2 (Buttons/Links/Highlight)
+   Success Green: #28a745 (Positive actions)
+   Warning Red: #dc3545 (Delete/Danger)
+   Light Background: #f4f7f9
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. LAYOUT & SIDEBAR INTEGRATION                                     */
+/* ------------------------------------------------------------------- */
+
+.page-layout {
+    display: flex;
+    /* Use this class for the top-level container */
+}
+
+/* Assuming a collapsible sidebar setup */
+.main-content {
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+/* State when the Sidebar is CLOSED */
+.main-content--full {
+    margin-left: 0;
+}
+
+.attendance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.page-title {
+    color: #2C3E50;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.summary-button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.summary-button:hover {
+    background-color: #387bcf;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. ATTENDANCE MARKING FORM                                          */
+/* ------------------------------------------------------------------- */
+
+.attendance-form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.attendance-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px; /* Spacing between elements */
+}
+
+.attendance-form select,
+.attendance-form input[type="text"],
+.attendance-form input[type="time"] {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+.attendance-form input:focus,
+.attendance-form select:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+.mark-button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.mark-button:hover {
+    background-color: #1e7e34;
+}
+
+.form-error {
+    color: #dc3545;
+    font-weight: 500;
+    margin-top: 5px;
+    flex-basis: 100%; /* forces error to its own line */
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. FILTERS BAR                                                      */
+/* ------------------------------------------------------------------- */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.filter-bar label {
+    font-weight: 500;
+    color: #333;
+    font-size: 15px;
+}
+
+.filter-bar input[type="text"],
+.filter-bar select {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 4. ATTENDANCE TABLE                                                 */
+/* ------------------------------------------------------------------- */
+
+.table-responsive {
+    overflow-x: auto; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    background-color: white;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 1200px; /* Ensures the table has minimum horizontal space */
+}
+
+.attendance-table thead th {
+    background-color: #2C3E50;
+    color: white;
+    padding: 12px 15px; 
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #3c5269; 
+}
+
+.attendance-table tbody td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0; 
+    vertical-align: middle;
+}
+
+.attendance-table tbody tr:nth-child(even) {
+    background-color: #f7f9fc; 
+}
+
+.attendance-table tbody tr:hover {
+    background-color: #eef3f7; 
+}
+
+/* Status Highlighting */
+.status-present {
+    font-weight: 600;
+    color: #28a745; /* Green */
+}
+.status-absent {
+    font-weight: 600;
+    color: #dc3545; /* Red */
+}
+.status-leave {
+    font-weight: 600;
+    color: #4A90E2; /* Blue */
+}
+
+/* Action Button in Table */
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. MEDIA QUERIES (Responsiveness)                                   */
+/* ------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .attendance-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .attendance-form select,
+    .attendance-form input,
+    .mark-button {
+        width: 100%;
+    }
+
+    .filter-bar {
+        /* Allow filters to stack */
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .filter-bar label {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .filter-bar input,
+    .filter-bar select {
+        width: 100%;
+    }
+}

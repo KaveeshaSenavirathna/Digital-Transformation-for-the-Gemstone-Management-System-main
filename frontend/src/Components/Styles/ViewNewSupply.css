@@ -1,0 +1,130 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Text/Headers)
+   Accent Blue: #4A90E2 (Section Titles, Highlight)
+   Secondary Gray: #4b5563 (Back Button BG)
+   Accent Yellow: #f59e0b (Edit Button BG)
+   Light Background: #f9fafb (Card BG)
+   Border/Divider: #e5e7eb
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. CONTAINER & HEADER                                               */
+/* ------------------------------------------------------------------- */
+
+.view-container {
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.view-header {
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    margin-bottom: 25px; 
+    color: #2C3E50;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.highlight-id {
+    color: #4A90E2; /* Use accent color for the key ID */
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. PROFILE GRID/CARD STYLING                                        */
+/* ------------------------------------------------------------------- */
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #4A90E2;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e5e7eb;
+    grid-column: 1 / -1; /* Ensure title spans full width */
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Responsive two-column layout */
+    gap: 15px 30px; /* Vertical and horizontal gap */
+    margin-bottom: 10px;
+}
+
+.profile-item {
+    display: flex; /* Use flex for clean alignment */
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee; /* Subtle separator */
+    font-size: 0.95rem;
+}
+
+.profile-label {
+    font-weight: 600;
+    color: #374151;
+    min-width: 150px; /* Fixed width for labels */
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+.profile-value {
+    color: #2C3E50;
+    flex-grow: 1;
+    word-break: break-all; /* Handle long values */
+}
+
+.loading-message {
+    padding: 24px;
+    font-size: 1.2rem;
+    color: #4b5563;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. BUTTONS AND FOOTER                                               */
+/* ------------------------------------------------------------------- */
+
+.actions-footer {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.back-btn, .edit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.back-btn {
+    background-color: #4b5563; /* Secondary Gray */
+    color: white;
+}
+
+.back-btn:hover {
+    background-color: #374151;
+}
+
+.edit-btn {
+    background-color: #f59e0b; /* Accent Yellow */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #d97706;
+}

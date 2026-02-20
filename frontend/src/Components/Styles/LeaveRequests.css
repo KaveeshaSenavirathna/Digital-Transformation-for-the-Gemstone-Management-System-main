@@ -1,0 +1,208 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Headers, Table Header)
+   Accent Blue: #4A90E2 (Sync Button)
+   Success Green: #28a745 (Approve Status/Button)
+   Warning Red: #dc3545 (Reject Status/Button)
+   Pending Orange: #ffc107 (Pending Status)
+   Light Background: #f4f7f9
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. LAYOUT & HEADER                                                  */
+/* ------------------------------------------------------------------- */
+
+.page-layout {
+    display: flex;
+}
+
+.main-content-leave {
+    /* Assuming Sidebar width is 150px, adjust if necessary */
+    margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.leave-header {
+    color: #2C3E50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. SYNC BUTTON                                                      */
+/* ------------------------------------------------------------------- */
+
+.sync-button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sync-button:hover:not(:disabled) {
+    background-color: #387bcf;
+}
+
+.sync-button:disabled {
+    background-color: #a8a8a8;
+    cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. TABLE STYLING (The core of this page)                            */
+/* ------------------------------------------------------------------- */
+
+.table-responsive {
+    overflow-x: auto; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    background-color: white;
+}
+
+.leave-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 1400px; /* Ensure wide space for 13 columns */
+}
+
+.leave-table thead th {
+    background-color: #2C3E50;
+    color: white;
+    padding: 12px 10px; 
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-right: 1px solid #3c5269; 
+}
+
+.leave-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0; 
+    vertical-align: top; /* Align content to the top of the cell */
+    line-height: 1.4;
+}
+
+.leave-table tbody tr:nth-child(even) {
+    background-color: #f7f9fc; 
+}
+
+.leave-table tbody tr:hover {
+    background-color: #eef3f7; 
+}
+
+.no-requests-message {
+    text-align: center;
+    padding: 30px !important;
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Specific Column Width Adjustments */
+.leave-table td:nth-child(1), /* Timestamp */
+.leave-table th:nth-child(1) {
+    width: 10%;
+}
+.leave-table td:nth-child(11), /* Reason */
+.leave-table th:nth-child(11) {
+    width: 15%; 
+    max-width: 250px;
+}
+.leave-table td:nth-child(13), /* Actions */
+.leave-table th:nth-child(13) {
+    width: 10%; 
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------- */
+/* 4. STATUS BADGES                                                    */
+/* ------------------------------------------------------------------- */
+
+.status-Approved,
+.status-Rejected,
+.status-Pending {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.status-Pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-Approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-Rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ------------------------------------------------------------------- */
+/* 5. ACTION BUTTONS IN TABLE                                          */
+/* ------------------------------------------------------------------- */
+
+.action-buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.approve-btn,
+.reject-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 80px;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.approve-btn {
+    background-color: #28a745; /* Green */
+    color: white;
+}
+
+.approve-btn:hover:not(:disabled) {
+    background-color: #1e7e34;
+}
+
+.reject-btn {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
+
+.reject-btn:hover:not(:disabled) {
+    background-color: #c82333;
+}
+
+.approve-btn:disabled,
+.reject-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}

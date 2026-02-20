@@ -1,0 +1,151 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+}
+
+/* Navbar container */
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+}
+
+/* Nav Left Section */
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.nav-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.home-ul {
+  background-color: #98c5e2; /* your base color */
+  list-style: none;
+  display: flex;
+  justify-content: center;   /* Centers menu items */
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Each nav item */
+.nav-links {
+  margin:  1px;
+  position: relative;
+}
+
+/* Links */
+.home-a {
+  display: block;
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 18px 39px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect with underline animation */
+.home-a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #3868b1;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 1px;
+}
+
+.home-a:hover::after {
+  width: 100%;
+}
+
+.home-a:hover {
+  background-color: rgba(53, 53, 53, 0.7);
+  color: #ffffff;
+  transform: translateY(-2px); /* slight lift */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Active link styling */
+.home-a.active {
+  background-color: #3868b1;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 4px 60px rgba(0,0,0,0.2);
+}
+
+/* Fix <h1> inside nav to not look huge */
+.home-a h1 {
+  font-size: 13px;
+  margin: 0;
+  font-weight: normal;
+}
+
+/* Page content padding (so it doesn't hide under navbar) */
+body {
+  padding-top: 80px; /* adjusted for new navbar height */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+}
+
+.nav-right .home-a {
+  padding: 10px 18px;
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 768px) {
+  .nav-bar { flex-direction: column; align-items: stretch; }
+  .home-ul { flex-wrap: wrap; justify-content: center; }
+  .nav-right { justify-content: center; margin: 6px 0; }
+
+  .nav-links {
+    margin: 5px 0;
+  }
+
+  .home-a {
+    text-align: center;
+    padding: 12px;
+  }
+}

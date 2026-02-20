@@ -1,0 +1,37 @@
+:root {
+  --brand: #8b5a2b; /* gemstone brown */
+  --brand-600: #7a4f26;
+  --brand-700: #6a4521;
+  --bg: #0b0f14;
+  --panel: #11161d;
+  --muted: #9aa4b2;
+  --text: #e5e7eb;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.btn { border: 1px solid transparent; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn-primary { background: var(--brand); color: white; }
+.btn-secondary { background: #1f2937; color: var(--text); border-color: #334155; }
+.btn-success { background: var(--success); color: #052e12; }
+.btn-danger { background: var(--danger); color: #3a0606; }
+
+.status-badge { padding: 4px 8px; border-radius: 999px; font-size: 12px; }
+.status-badge.pending { background: #1e293b; color: #eab308; }
+.status-badge.completed { background: #052e12; color: #22c55e; }
+.status-badge.processing { background: #1e293b; color: #60a5fa; }
+.status-badge.shipped { background: #0f172a; color: #a78bfa; }
+
+.message { padding: 10px 12px; border-radius: 8px; margin: 8px 0; }
+.message.success { background: #052e12; color: #22c55e; }
+.message.error { background: #3a0606; color: #ef4444; }
+
+.card-blue { background: linear-gradient(135deg, #0ea5e9, #1e40af); color: white; }
+.card-green { background: linear-gradient(135deg, #22c55e, #14532d); color: white; }
+

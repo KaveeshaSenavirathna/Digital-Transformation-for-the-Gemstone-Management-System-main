@@ -1,0 +1,167 @@
+/* ------------------------------------------------------------ */
+/*  Supply Lot List Styling                                     */
+/* ------------------------------------------------------------ */
+
+.lot-list-container {
+  display: flex;
+  background-color: #f4f7f9;
+  min-height: 100vh;
+}
+
+.lot-list-content {
+  margin-left: 400px;
+  padding: 40px;
+  flex: 1;
+}
+
+/* ------------------------------------------------------------ */
+/*  Header                                                      */
+/* ------------------------------------------------------------ */
+.lot-list-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2C3E50;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* ------------------------------------------------------------ */
+/*  Filter + Search Bar                                         */
+/* ------------------------------------------------------------ */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.filter-bar select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9fafb;
+  font-size: 0.9rem;
+}
+
+.add-btn {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-btn:hover {
+  background-color: #357ABD;
+}
+
+/* ------------------------------------------------------------ */
+/*  Table Styling                                               */
+/* ------------------------------------------------------------ */
+.table-wrapper {
+  overflow-x: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lot-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.lot-table th,
+.lot-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.lot-table thead th {
+  background-color: #EAECEF;
+  font-weight: 600;
+  color: #2C3E50;
+}
+
+.lot-table tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+/* ------------------------------------------------------------ */
+/*  Action Buttons                                              */
+/* ------------------------------------------------------------ */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.edit-btn {
+  background-color: #F59E0B;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #D97706;
+}
+
+.delete-btn {
+  background-color: #EF4444;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #DC2626;
+}
+
+.proceed-btn {
+  background-color: #10B981;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.proceed-btn:hover {
+  background-color: #059669;
+}
+
+.proceed-btn.disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+}

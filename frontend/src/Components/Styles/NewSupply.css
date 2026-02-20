@@ -1,0 +1,159 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Headers, Sidebar BG)
+   Accent Blue: #4A90E2 (Submit Button)
+   Danger Red: #E74C3C (Error text)
+   Secondary Grey: #6c757d (Back Button)
+   Light Background: #f4f7f9
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. LAYOUT & HEADER                                                  */
+/* ------------------------------------------------------------------- */
+
+.add-container {
+    display: flex;
+    /* The Sidebar component manages the left panel */
+}
+
+.add-content {
+   margin-left: 400px; 
+    flex-grow: 1; /* Take up the remaining space */
+    padding: 20px 40px; /* Padding around the main content */
+    margin-right: 0;
+    background-color: #f4f7f9; /* Light, clean background */
+    min-height: 100vh;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.add-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.add-header h1 {
+    color: #2C3E50;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.back-button-top {
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.back-button-top:hover {
+    background-color: #5a6268;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. FORM STYLING                                                     */
+/* ------------------------------------------------------------------- */
+
+.add-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: grid;
+    /* Use two columns for the main inputs */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px;
+}
+
+.add-form h3 {
+    grid-column: 1 / -1; /* Make section titles span full width */
+    color: #4A90E2;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #eee;
+}
+
+.add-form input[type="text"],
+.add-form input[type="date"],
+.add-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.add-form input:focus,
+.add-form select:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+}
+
+.add-form label {
+    display: block;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+/* Group inputs with errors */
+.form-group-error > input,
+.form-group-error > select {
+    border-color: #E74C3C !important;
+}
+
+/* ------------------------------------------------------------------- */
+/* 3. SUBMIT & ERRORS                                                  */
+/* ------------------------------------------------------------------- */
+
+.add-form button[type="submit"] {
+    grid-column: 1 / -1; /* Full width for the submit button */
+    margin-top: 10px;
+    padding: 15px 25px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-form button[type="submit"]:hover {
+    background-color: #387bcf;
+}
+
+.error {
+    color: #E74C3C;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+/* Style for input/select combined with error message in one grid cell */
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Override padding for labels immediately followed by an input/select */
+.input-group label:first-child {
+    margin-top: 0;
+}

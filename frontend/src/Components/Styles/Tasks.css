@@ -1,0 +1,241 @@
+/* Color Palette:
+   Primary Dark: #2C3E50 (Headers, Table Header)
+   Accent Blue: #4A90E2 (Assign Button, Highlight)
+   Success Green: #28a745 (Done Status)
+   Warning Yellow: #ffc107 (Pending Status)
+   Primary Orange: #fd7e14 (In Progress Status)
+   Danger Red: #dc3545 (Delete Button)
+   Light Background: #f4f7f9
+*/
+
+/* ------------------------------------------------------------------- */
+/* 1. LAYOUT & SIDEBAR INTEGRATION                                     */
+/* ------------------------------------------------------------------- */
+
+.tasks-dashboard {
+    display: flex;
+    /* The Sidebar component manages the left panel */
+}
+
+/* Page content container (shifted right to account for the sidebar) */
+.page-content {
+    margin-left: 150px; /* Adjust based on your Sidebar width */
+    flex-grow: 1;
+    padding: 30px 40px;
+    background-color: #f4f7f9;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* If you need a class for when the sidebar is closed: */
+/*
+.page-content.full-width {
+    margin-left: 0;
+}
+*/
+
+.page-title {
+    color: #2C3E50;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.task-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+
+.task-section h3 {
+    color: #4A90E2;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. ASSIGN TASK FORM                                                 */
+/* ------------------------------------------------------------------- */
+
+.task-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+    gap: 20px;
+}
+
+.task-form .form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make Description/Textarea span two columns */
+.task-form .form-row:nth-of-type(4) { 
+    grid-column: 1 / -1;
+}
+
+.task-form label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #f8f8f8;
+}
+
+.task-form input:focus,
+.task-form select:focus,
+.task-form textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+    outline: none;
+    background-color: white;
+}
+
+.task-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.assign-btn {
+    grid-column: 1 / -1; /* Make button span full width */
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+    max-width: 200px;
+    justify-self: start;
+}
+
+.assign-btn:hover {
+    background-color: #387bcf;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+}
+
+.assign-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.3);
+}
+
+
+/* ------------------------------------------------------------------- */
+/* 3. TASK TABLES                                                      */
+/* ------------------------------------------------------------------- */
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.task-table thead th {
+    background-color: #2C3E50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.task-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: middle;
+}
+
+.task-table tbody tr:nth-child(even) {
+    background-color: #f7f9fc;
+}
+
+.task-table tbody tr:hover {
+    background-color: #eef3f7;
+}
+
+/* Task Status Select inside table */
+.task-table select {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Status colors (using a class helper on the TD if possible, or select style) */
+/* This part is usually handled by conditional rendering in React, but here's the CSS */
+.status-pending {
+    color: #ff8c00; /* Darker orange */
+    font-weight: 600;
+}
+.status-in_progress {
+    color: #4A90E2; /* Blue */
+    font-weight: 600;
+}
+.status-done {
+    color: #28a745; /* Green */
+    font-weight: 600;
+}
+
+/* Actions Column */
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+
+/* ------------------------------------------------------------------- */
+/* 4. RESPONSIVENESS                                                   */
+/* ------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .page-content {
+        padding: 20px;
+    }
+
+    /* Stack form inputs vertically */
+    .task-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .task-form .form-row:nth-of-type(4) { 
+        grid-column: 1;
+    }
+
+    /* Allow tables to scroll horizontally on small screens */
+    .task-section {
+        overflow-x: auto;
+    }
+    
+    .task-table {
+        min-width: 700px; 
+    }
+}

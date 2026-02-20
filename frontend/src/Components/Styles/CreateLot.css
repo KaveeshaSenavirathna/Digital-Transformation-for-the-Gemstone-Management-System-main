@@ -1,0 +1,114 @@
+/* ------------------------------------------------------------ */
+/*  COLOR PALETTE (same as summary page)                        */
+/* ------------------------------------------------------------ */
+/*  Primary Dark: #2C3E50 (Headers/Text)
+    Accent Blue: #4A90E2 (Buttons)
+    Accent Green: #10B981
+    Secondary Gray: #6c757d
+    Background: #f4f7f9
+    Card White: #ffffff
+*/
+/* ------------------------------------------------------------ */
+/* 1. PAGE CONTAINER                                            */
+/* ------------------------------------------------------------ */
+
+.create-lot-container {
+  display: flex;
+  background-color: #f4f7f9;
+  min-height: 100vh;
+}
+
+.create-lot-content {
+  margin-left: 400px; /* matches sidebar width */
+  padding: 40px;
+  flex: 1;
+}
+
+/* ------------------------------------------------------------ */
+/* 2. HEADER                                                    */
+/* ------------------------------------------------------------ */
+
+.create-lot-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2C3E50;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* ------------------------------------------------------------ */
+/* 3. FORM STYLING                                              */
+/* ------------------------------------------------------------ */
+
+.create-lot-form {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.input-group input,
+.input-group select {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  background-color: #f9fafb;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #4A90E2;
+  outline: none;
+  background-color: #ffffff;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* ------------------------------------------------------------ */
+/* 4. BUTTON                                                    */
+/* ------------------------------------------------------------ */
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.create-btn {
+  background-color: #4A90E2;
+  color: white;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.create-btn:hover {
+  background-color: #357ABD;
+}

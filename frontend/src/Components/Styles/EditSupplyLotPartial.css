@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------ */
+/*  Edit Supply Lot Page                                        */
+/* ------------------------------------------------------------ */
+
+.edit-lot-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f7f9;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.edit-lot-card {
+  background: #fff;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 550px;
+}
+
+.edit-lot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.edit-lot-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2C3E50;
+}
+
+.back-btn {
+  background-color: #E5E7EB;
+  color: #111827;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: #D1D5DB;
+}
+
+/* ------------------------------------------------------------ */
+/*  Form Styles                                                 */
+/* ------------------------------------------------------------ */
+.edit-lot-form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.edit-lot-form input,
+.edit-lot-form select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.edit-lot-form input:focus,
+.edit-lot-form select:focus {
+  border-color: #3B82F6;
+  outline: none;
+  box-shadow: 0 0 0 1px #3B82F6;
+}
+
+.readonly-input {
+  background-color: #E5E7EB;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------ */
+/*  Buttons                                                     */
+/* ------------------------------------------------------------ */
+.update-btn {
+  background-color: #10B981;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  margin-top: 10px;
+}
+
+.update-btn:hover {
+  background-color: #059669;
+}
+
+/* ------------------------------------------------------------ */
+/*  Loading Text                                                */
+/* ------------------------------------------------------------ */
+.loading {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #4B5563;
+  margin-top: 80px;
+}
