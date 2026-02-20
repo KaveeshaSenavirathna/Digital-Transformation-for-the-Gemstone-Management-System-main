@@ -92,5 +92,5 @@ npm run dev
 ---
 
 ## 📫 Contact
-- **Email:** officiallahiru.p@gmail.com  
-- **GitHub:** [lahiru-priyankara](https://github.com/lahiru-priyankara)  
+- **Email:** mmpkaveesha@gmail.com  
+- **GitHub:** https://github.com/KaveeshaSenavirathna
